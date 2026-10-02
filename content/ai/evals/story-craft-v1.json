@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rewrite-preserves-branch-contract",
+    "task": "rewrite_scene",
+    "brief": "설명을 늘리지 말고 소라가 진실을 숨기는 느낌과 바닷바람의 감각을 강화해줘.",
+    "sceneId": "ten-year-mail",
+    "expect": ["scene", "existing_choice_ids", "valid_scene_targets", "five_craft_checks"]
+  },
+  {
+    "id": "choices-have-different-costs",
+    "task": "expand_choices",
+    "brief": "서로 다른 정보 비용과 감정 비용을 가진 선택지를 제안해줘.",
+    "sceneId": "sora-answer",
+    "expect": ["scene", "valid_scene_targets", "distinct_choice_intents", "five_craft_checks"]
+  },
+  {
+    "id": "art-direction-follows-story-function",
+    "task": "art_direction",
+    "brief": "인물 얼굴보다 빈 우체국과 내일 날짜 소인이 주는 불안을 중심으로 잡아줘.",
+    "sceneId": "ten-year-mail",
+    "expect": ["art", "purpose_and_subject", "composition_with_ui_space", "lighting_and_palette", "continuity_anchors", "alt_text", "avoid_text_logos_and_watermarks", "five_craft_checks"]
+  },
+  {
+    "id": "sound-leaves-room-for-reading",
+    "task": "sound_direction",
+    "brief": "본문 읽기를 방해하지 않는 낮은 강도의 환경음과 진입 cue를 제안해줘.",
+    "sceneId": "tide-road",
+    "expect": ["sound", "valid_audio_channel", "bounded_volume", "five_craft_checks"]
+  },
+  {
+    "id": "review-does-not-rewrite",
+    "task": "continuity_review",
+    "brief": "연우의 행방, 소라의 지식 범위, 두 결말로 이어지는 감정의 도약을 검수해줘.",
+    "sceneId": "last-delivery",
+    "expect": ["review", "no_scene_patch", "actionable_findings", "five_craft_checks"]
+  }
+]

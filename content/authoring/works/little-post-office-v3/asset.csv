@@ -1,0 +1,2 @@
+asset_id,asset_type,source_path,status,rights_holder,license,content_hash,alt_text,duration_ms,notes
+little-post-office-cover,background,assets/little-post-office-cover.jpg,ready,Story Post project,project use under OpenAI terms,065c125592c2f383a130ecf68daa1a2eafcab42751998c9c9262276ce12c7707,밤바다 옆 오래된 우체국과 멀리 보이는 등대,,OpenAI ImageGen으로 생성한 개발용 표지 겸 배경

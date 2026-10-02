@@ -1,0 +1,25 @@
+{
+  "presentationSchemaVersion": 1,
+  "assets": [
+    {
+      "id": "little-post-office-cover",
+      "type": "background",
+      "bundlePath": "assets/little-post-office-cover.jpg",
+      "hash": "065c125592c2f383a130ecf68daa1a2eafcab42751998c9c9262276ce12c7707",
+      "altText": "밤바다 옆 오래된 우체국과 멀리 보이는 등대"
+    }
+  ],
+  "cues": [
+    {
+      "id": "ten-year-mail-cover",
+      "sceneId": "ten-year-mail",
+      "trigger": "scene_enter",
+      "channel": "background",
+      "action": "show",
+      "assetId": "little-post-office-cover",
+      "ordinal": 0,
+      "fadeMs": 0,
+      "loop": false
+    }
+  ]
+}

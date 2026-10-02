@@ -1,0 +1,5 @@
+story_id,working_version,locale,choice_id,ordinal,flag_id,operation,value
+little-post-office,4,ko,show-warning,0,with-sora,set,true
+little-post-office,4,ko,call-sora,0,with-sora,set,true
+little-post-office,4,ko,read-address-book,0,follow-addresses,set,true
+little-post-office,4,ko,read-personal-diary,0,read-personal-note,set,true

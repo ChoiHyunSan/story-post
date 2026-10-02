@@ -1,0 +1,4 @@
+story_id,working_version,locale,flag_id,ordinal,value_type,default_value,description
+little-post-office,3,ko,with-sora,0,boolean,false,
+little-post-office,3,ko,follow-addresses,1,boolean,false,
+little-post-office,3,ko,read-personal-note,2,boolean,false,

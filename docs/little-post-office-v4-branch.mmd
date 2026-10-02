@@ -1,0 +1,45 @@
+flowchart TD
+  %% Generated from little-post-office@4/ko
+  scene0["ten-year-mail · 작은 세계 우체국의 소라"]
+  scene1["sora-answer · 답을 고르는 소라"]
+  scene2["first-letter · 내일의 연우"]
+  scene3["shared-route · 닫힌 책방 앞"]
+  scene4["private-route · 책방 창문 안쪽"]
+  scene5["bookshop-archive · 파도 사이 책방의 대출 장부"]
+  scene6["haejin-letter · 등대지기 해진"]
+  scene7["haejin-answer · 문 아래로 돌아온 빈 봉투"]
+  scene8["tide-road · 썰물 위의 바닷길"]
+  scene9["lighthouse-room · 불이 꺼진 등대의 분류실"]
+  scene10["undelivered-addresses · 배달되지 못한 일곱 주소"]
+  scene11["yeonwoo-confession · 연우가 보내지 못한 고백"]
+  scene12["haejin-truth · 등대 계단의 해진"]
+  scene13["shared-vigil · 소라와 연우가 남긴 시간"]
+  scene14["solitary-vigil · 혼자 돌린 마지막 열쇠"]
+  scene15["last-delivery · 십 년 전의 연우"]
+  scene16(["returned-ending · 결말"])
+  scene17(["kept-ending · 결말"])
+  scene0 -->|"우선 내 이름이 적힌 편지를 받는다"| scene2
+  scene0 -->|"누가 이 편지를 맡겼는지 먼저 묻는다"| scene1
+  scene1 -->|"열쇠 이야기를 기억하며 편지를 연다"| scene2
+  scene2 -->|"소라에게 편지를 보여 주고 함께 책방으로 간다"| scene3
+  scene2 -->|"편지를 감추고 혼자 닫힌 책방을 찾는다"| scene4
+  scene3 -->|"소라와 함께 책방 안의 기록을 찾는다"| scene5
+  scene4 -->|"소라를 불러 쪽지를 보여 준다"| scene5
+  scene4 -->|"쪽지를 간직하고 혼자 책방에 들어간다"| scene5
+  scene5 -->|"배달하지 못한 주소가 표시된 지도책을 읽는다"| scene6
+  scene5 -->|"연우가 남긴 개인 일기를 읽는다"| scene6
+  scene6 -->|"연우가 어디에 있는지 묻는 답장을 쓴다"| scene7
+  scene6 -->|"답을 기다리지 않고 바닷길로 향한다"| scene8
+  scene7 -->|"해진이 표시한 길을 따라 등대로 간다"| scene8
+  scene8 -->|"소라와 보폭을 맞춰 등대 문을 연다 [with-sora=true]"| scene9
+  scene8 -->|"혼자 발자국을 따라 등대 문을 연다 [with-sora=false]"| scene9
+  scene9 -->|"지도와 우편함을 맞춰 배달하지 못한 주소를 정리한다 [follow-addresses=…"| scene10
+  scene9 -->|"일기에서 떨어진 연우의 고백을 읽는다 [read-personal-note=true]"| scene11
+  scene10 -->|"편지를 열지 않고 수신인에게 돌려주기로 한다"| scene12
+  scene11 -->|"문장을 덜어 내지 않고 고백 전체를 남긴다"| scene12
+  scene12 -->|"소라와 함께 열쇠를 돌린다 [with-sora=true]"| scene13
+  scene12 -->|"내가 열쇠를 돌려 마지막 칸을 연다 [with-sora=false]"| scene14
+  scene13 -->|"소라와 함께 마지막 봉투를 꺼낸다"| scene15
+  scene14 -->|"마지막 봉투와 장부를 꺼낸다"| scene15
+  scene15 -->|"장부와 마지막 편지를 우체국으로 가져간다"| scene16
+  scene15 -->|"마지막 편지를 간직하고 우편함을 닫는다"| scene17

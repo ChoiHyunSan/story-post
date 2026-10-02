@@ -1,0 +1,43 @@
+erDiagram
+    direction LR
+    STORY_PACKAGE ||--|{ NODE : contains
+    STORY_PACKAGE ||--o{ FLAG_DEFINITION : declares
+    NODE ||--o{ CHOICE : offers
+    CHOICE }o--|| NODE : targets
+    CHOICE ||--o{ CONDITION : requires_all
+    CHOICE ||--o{ EFFECT : applies
+    FLAG_DEFINITION ||--o{ CONDITION : reads
+    FLAG_DEFINITION ||--o{ EFFECT : writes
+    NODE ||--o| ENDING : finishes
+    STORY_PACKAGE {
+        string storyId PK
+        int version PK
+        int schemaVersion
+        int engineContractVersion
+        string startNodeId
+    }
+    NODE {
+        string nodeId PK
+        string type
+        string body
+    }
+    CHOICE {
+        string choiceId PK
+        string nextNodeId FK
+        string text
+    }
+    FLAG_DEFINITION {
+        string flagId PK
+        boolean defaultValue
+    }
+    CONDITION {
+        string flagId FK
+        boolean equals
+    }
+    EFFECT {
+        string flagId FK
+        boolean setValue
+    }
+    ENDING {
+        string endingId PK
+    }

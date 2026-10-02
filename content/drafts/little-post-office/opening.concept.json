@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "storyId": "little-post-office",
+  "version": 1,
+  "locale": "ko",
+  "startNodeId": "first-delivery",
+  "nodes": [
+    {
+      "id": "first-delivery",
+      "type": "letter",
+      "sender": "우체부 소라",
+      "body": "새로 이사 온 분께. 이 집은 십 년 동안 비어 있었어요. 그런데 매주 편지가 한 통씩 도착했답니다. 오늘부터 당신에게 전달해도 될까요?",
+      "choices": [
+        {"id": "ask-sender", "text": "누가 보낸 편지인가요?", "nextNodeId": "postmark", "effects": {"askedAboutSender": true}},
+        {"id": "accept-letter", "text": "우선 한 통 읽어볼게요.", "nextNodeId": "tomorrow", "effects": {"acceptedLetter": true}}
+      ]
+    },
+    {"id": "postmark", "type": "ending", "endingId": "preview-postmark", "body": "소라는 봉투를 뒤집었다. 발신인 대신, 오래전에 문을 닫은 등대 우체국의 소인이 찍혀 있었다. — 시제품 종료"},
+    {"id": "tomorrow", "type": "ending", "endingId": "preview-tomorrow", "body": "봉투 안에는 한 문장뿐이었다. 내일 등대에는 가지 마세요. 편지의 날짜는 내일이었다. — 시제품 종료"}
+  ]
+}

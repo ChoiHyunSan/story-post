@@ -1,0 +1,25 @@
+{
+  "activeProfile": "story-craft-v1",
+  "profiles": [
+    {
+      "id": "story-craft-v1",
+      "path": "content/ai/prompts/story-craft-v1.md",
+      "locale": "ko",
+      "purpose": "선택형 스토리 원고·선택지·이미지·사운드 연출 제안",
+      "sources": [
+        {
+          "name": "OpenAI prompt engineering and Structured Outputs guidance",
+          "url": "https://developers.openai.com/api/docs/guides/prompt-engineering"
+        },
+        {
+          "name": "creative-writing-craft skill",
+          "url": "https://skills.sh/haowjy/creative-writing-skills/creative-writing-craft"
+        },
+        {
+          "name": "OpenAI image generation prompting guide",
+          "url": "https://developers.openai.com/api/docs/guides/image-prompting"
+        }
+      ]
+    }
+  ]
+}

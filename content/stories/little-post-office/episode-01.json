@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "engineContractVersion": 1,
+  "storyId": "little-post-office",
+  "version": 1,
+  "locale": "ko",
+  "title": "작은 세계 우체국: 내일의 소인",
+  "description": "십 년 동안 빈집으로 배달된 편지와 내일 날짜가 찍힌 소인의 비밀을 따라갑니다.",
+  "startNodeId": "ten-year-mail",
+  "flags": [
+    { "id": "shared-warning", "defaultValue": false },
+    { "id": "with-sora", "defaultValue": false }
+  ],
+  "nodes": [
+    {
+      "id": "ten-year-mail",
+      "type": "letter",
+      "sender": "우체부 소라",
+      "body": "새로 이사 온 집의 문을 두드린 사람은 노란 우편 가방을 멘 소라였다.\n\n“이 집은 십 년 동안 비어 있었어요. 그런데도 매주 목요일이면 편지가 한 통씩 도착했죠.”\n\n소라는 빛이 바랜 봉투 하나를 내밀었다. 받는 사람의 이름은 없고, 주소에는 분명 지금 당신이 서 있는 집이 적혀 있었다.",
+      "choices": [
+        {
+          "id": "ask-sender",
+          "text": "누가 보냈는지 먼저 묻는다",
+          "nextNodeId": "sora-answer",
+          "requires": [],
+          "effects": []
+        },
+        {
+          "id": "accept-first-letter",
+          "text": "우선 첫 편지를 받아 든다",
+          "nextNodeId": "future-postmark",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "sora-answer",
+      "type": "letter",
+      "sender": "우체부 소라",
+      "body": "“발신인은 한 번도 적혀 있지 않았어요.”\n\n첫 편지가 도착한 날은 등대 우체국이 문을 닫은 바로 다음 날이었다. 이 집의 전 주인 연우는 떠나기 전, 언젠가 새 사람이 오면 편지를 한 통만 건네 달라고 부탁했다고 했다.\n\n소라는 나머지 편지들이 든 가방을 단단히 닫았다. 첫 봉투를 읽기 전에는 더 말해 줄 수 없다는 표정이었다.",
+      "choices": [
+        {
+          "id": "open-after-answer",
+          "text": "첫 봉투를 연다",
+          "nextNodeId": "future-postmark",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "future-postmark",
+      "type": "letter",
+      "sender": "이름 없는 편지",
+      "body": "봉투 뒤에는 오래전에 문을 닫았다는 등대 우체국의 소인이 찍혀 있었다. 날짜는 내일이었다.\n\n편지 안에는 짧은 문장 하나뿐이었다.\n\n‘내일 밤, 등대의 마지막 우편함을 열지 마세요. 그 안의 편지는 아직 당신 것이 아닙니다.’\n\n창밖에서 기다리던 소라가 조심스럽게 안부를 물었다.",
+      "choices": [
+        {
+          "id": "show-warning",
+          "text": "소라에게 경고문을 보여 준다",
+          "nextNodeId": "sora-remembers",
+          "requires": [],
+          "effects": [
+            { "flagId": "shared-warning", "setValue": true }
+          ]
+        },
+        {
+          "id": "hide-warning",
+          "text": "편지를 접어 혼자 간직한다",
+          "nextNodeId": "second-warning",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "sora-remembers",
+      "type": "letter",
+      "sender": "우체부 소라",
+      "body": "경고문을 읽은 소라의 손끝이 멈췄다.\n\n“연우 씨도 마지막 날에 똑같은 말을 했어요. 이 집의 전 주인이었죠. 등대로 편지를 배달하러 간 뒤 돌아오지 않았어요.”\n\n소라는 우편 가방에서 녹슨 작은 열쇠를 꺼냈다. 등대 우편함의 열쇠였다. 버리지 못한 채 십 년을 가지고 있었다고 했다.",
+      "choices": [
+        {
+          "id": "go-with-sora",
+          "text": "소라에게 함께 가 달라고 한다",
+          "nextNodeId": "lighthouse-road",
+          "requires": [],
+          "effects": [
+            { "flagId": "with-sora", "setValue": true }
+          ]
+        },
+        {
+          "id": "ask-sora-to-wait",
+          "text": "열쇠만 받아 혼자 확인한다",
+          "nextNodeId": "lighthouse-road",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "second-warning",
+      "type": "letter",
+      "sender": "문틈 아래의 편지",
+      "body": "다음 날 해가 지자 문틈 아래로 새 봉투가 미끄러져 들어왔다. 방금까지 비어 있던 현관에는 젖은 발자국 하나가 등대 쪽을 향해 있었다.\n\n‘그래도 오려 한다면 열쇠를 가진 우체부를 믿으세요. 혼자 오는 사람에게 우편함은 오래된 거짓말을 보여 줍니다.’\n\n골목 끝에서 소라의 자전거 종소리가 희미하게 들렸다.",
+      "choices": [
+        {
+          "id": "call-sora-back",
+          "text": "소라를 불러 편지를 함께 읽는다",
+          "nextNodeId": "lighthouse-road",
+          "requires": [],
+          "effects": [
+            { "flagId": "shared-warning", "setValue": true },
+            { "flagId": "with-sora", "setValue": true }
+          ]
+        },
+        {
+          "id": "leave-alone",
+          "text": "아무에게도 말하지 않고 등대로 간다",
+          "nextNodeId": "lighthouse-road",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "lighthouse-road",
+      "type": "letter",
+      "sender": "등대로 가는 길",
+      "body": "바닷물이 빠진 길 위로 달빛이 길게 번졌다. 절벽 끝의 등대는 불이 꺼져 있었지만, 아래층 창문만 편지지처럼 희게 빛났다.\n\n문 앞에는 두 사람의 발자국이 겹쳐 있었다. 하나는 오늘 생긴 것이고, 다른 하나는 십 년 전부터 지워지지 않은 듯 가장자리가 검게 말라 있었다.\n\n녹슨 열쇠가 손안에서 미세하게 떨렸다.",
+      "choices": [
+        {
+          "id": "enter-together",
+          "text": "소라와 함께 마지막 우편함으로 간다",
+          "nextNodeId": "last-delivery",
+          "requires": [
+            { "flagId": "with-sora", "equals": true }
+          ],
+          "effects": []
+        },
+        {
+          "id": "enter-alone",
+          "text": "혼자 마지막 우편함으로 간다",
+          "nextNodeId": "last-delivery",
+          "requires": [
+            { "flagId": "with-sora", "equals": false }
+          ],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "last-delivery",
+      "type": "letter",
+      "sender": "십 년 전의 연우",
+      "body": "마지막 우편함 안에는 막 마른 듯 따뜻한 봉투가 한 장 놓여 있었다.\n\n‘이 집으로 이사 올 다음 사람에게. 편지는 미래를 알려 주지 않습니다. 다만 혼자 감당했던 선택을 누군가와 나눌 기회를 한 번 더 보낼 뿐입니다.’\n\n봉투 아래에는 연우의 사직서와 배달하지 못한 편지들의 주소가 적힌 장부가 있었다. 첫 장의 수신지는 작은 세계 우체국이었다.",
+      "choices": [
+        {
+          "id": "return-ledger",
+          "text": "장부와 편지를 우체국으로 가져간다",
+          "nextNodeId": "returned-ending",
+          "requires": [],
+          "effects": []
+        },
+        {
+          "id": "keep-last-letter",
+          "text": "마지막 편지만 집으로 가져간다",
+          "nextNodeId": "kept-ending",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "returned-ending",
+      "type": "ending",
+      "endingId": "letters-returned",
+      "body": "새벽이 밝을 무렵, 작은 세계 우체국의 닫힌 창구에 불이 켜졌다.\n\n장부에 적힌 첫 주소부터 편지를 다시 배달하기로 했다. 소라는 오래된 소인을 새 도장 옆에 나란히 놓았다.\n\n다음 목요일, 당신의 집에는 처음으로 과거가 아닌 오늘의 날짜가 찍힌 편지가 도착했다.\n\n엔딩 · 다시 시작된 배달"
+    },
+    {
+      "id": "kept-ending",
+      "type": "ending",
+      "endingId": "last-letter-kept",
+      "body": "당신은 마지막 편지를 책상 서랍에 넣고 등대의 우편함을 다시 잠갔다.\n\n그 뒤로 빈집에 오던 편지는 멈췄다. 하지만 매주 목요일 밤이면 아직 쓰지 않은 답장 한 장이 서랍 위에 놓였다.\n\n언젠가 그 편지를 보낼 수 있을 때까지, 집은 조용히 다음 소인을 기다렸다.\n\n엔딩 · 보내지 않은 답장"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+erDiagram
+    STORY ||--|{ STORY_RELEASE : has_versions
+    STORY_RELEASE ||--o{ PLAYTHROUGH : pins_version
+    PLAYTHROUGH ||--o{ PLAYTHROUGH_FLAG : stores_state
+    PLAYTHROUGH ||--o{ CHOICE_HISTORY : records_choices
+    STORY_RELEASE ||--o{ ENDING_UNLOCK : first_discovery
+    STORY {
+        TEXT story_id PK
+    }
+    STORY_RELEASE {
+        TEXT story_id PK,FK
+        INTEGER content_version PK
+        TEXT content_hash
+        INTEGER content_schema_version
+        INTEGER engine_contract_version
+        TEXT start_node_id
+    }
+    PLAYTHROUGH {
+        TEXT playthrough_id PK
+        TEXT story_id FK
+        INTEGER content_version FK
+        TEXT current_node_id
+        TEXT status
+        INTEGER revision
+        INTEGER created_at_ms
+        INTEGER updated_at_ms
+        INTEGER finished_at_ms
+    }
+    PLAYTHROUGH_FLAG {
+        TEXT playthrough_id PK,FK
+        TEXT flag_id PK
+        INTEGER value
+    }
+    CHOICE_HISTORY {
+        TEXT playthrough_id PK,FK
+        INTEGER sequence PK
+        TEXT from_node_id
+        TEXT choice_id
+        TEXT to_node_id
+        INTEGER selected_at_ms
+    }
+    ENDING_UNLOCK {
+        TEXT story_id PK,FK
+        TEXT ending_id PK
+        INTEGER first_content_version FK
+        INTEGER unlocked_at_ms
+    }
+    APP_SETTINGS {
+        INTEGER singleton_id PK
+        REAL text_scale
+        INTEGER reduce_motion
+    }

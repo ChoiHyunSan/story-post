@@ -1,0 +1,22 @@
+[
+  {
+    "directory": "content/authoring/works/little-post-office-v3",
+    "storyId": "little-post-office",
+    "workingVersion": 3,
+    "locale": "ko",
+    "storyPath": "content/stories/little-post-office/episode-01-v3.json",
+    "presentationPath": "content/presentations/little-post-office/episode-01-v3.json",
+    "reportPath": "docs/little-post-office-production-sheet.md",
+    "graphPath": "docs/little-post-office-branch.mmd"
+  },
+  {
+    "directory": "content/authoring/works/little-post-office-v4",
+    "storyId": "little-post-office",
+    "workingVersion": 4,
+    "locale": "ko",
+    "storyPath": "content/stories/little-post-office/episode-01-v4.json",
+    "presentationPath": "content/presentations/little-post-office/episode-01-v4.json",
+    "reportPath": "docs/little-post-office-v4-production-sheet.md",
+    "graphPath": "docs/little-post-office-v4-branch.mmd"
+  }
+]

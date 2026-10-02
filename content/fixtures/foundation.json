@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "engineContractVersion": 1,
+  "storyId": "foundation-check",
+  "version": 1,
+  "locale": "ko",
+  "title": "첫 번째 봉투",
+  "description": "선택과 이어하기를 확인하는 개발용 시나리오입니다.",
+  "startNodeId": "arrival",
+  "flags": [
+    {
+      "id": "opened",
+      "defaultValue": false
+    }
+  ],
+  "nodes": [
+    {
+      "id": "arrival",
+      "type": "letter",
+      "sender": "Story Post",
+      "body": "책상 위에 봉투 하나가 놓여 있습니다.\n\n이 짧은 장면은 선택과 저장을 확인하기 위한 개발용 시나리오입니다.",
+      "choices": [
+        {
+          "id": "open",
+          "text": "봉투를 열어 본다",
+          "nextNodeId": "reply",
+          "requires": [],
+          "effects": [
+            {
+              "flagId": "opened",
+              "setValue": true
+            }
+          ]
+        },
+        {
+          "id": "wait",
+          "text": "봉투를 그대로 둔다",
+          "nextNodeId": "reply",
+          "requires": [],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "reply",
+      "type": "letter",
+      "sender": "기록 보관소",
+      "body": "당신의 선택을 기억했습니다. 앱을 종료하고 다시 열어도 이 자리에서 이어집니다.",
+      "choices": [
+        {
+          "id": "read",
+          "text": "편지를 읽고 마친다",
+          "nextNodeId": "read-ending",
+          "requires": [
+            {
+              "flagId": "opened",
+              "equals": true
+            }
+          ],
+          "effects": []
+        },
+        {
+          "id": "keep",
+          "text": "봉투를 간직하고 마친다",
+          "nextNodeId": "kept-ending",
+          "requires": [
+            {
+              "flagId": "opened",
+              "equals": false
+            }
+          ],
+          "effects": []
+        }
+      ]
+    },
+    {
+      "id": "read-ending",
+      "type": "ending",
+      "endingId": "letter-read",
+      "body": "편지를 읽었습니다. 첫 번째 기록이 보관함에 남았습니다."
+    },
+    {
+      "id": "kept-ending",
+      "type": "ending",
+      "endingId": "letter-kept",
+      "body": "열지 않은 편지를 간직했습니다. 다른 선택은 또 다른 기록을 남깁니다."
+    }
+  ]
+}

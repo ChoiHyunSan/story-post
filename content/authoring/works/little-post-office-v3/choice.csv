@@ -1,0 +1,26 @@
+story_id,working_version,locale,choice_id,scene_id,ordinal,text,next_scene_id
+little-post-office,3,ko,accept-first-letter,ten-year-mail,0,우선 내 이름이 적힌 편지를 받는다,first-letter
+little-post-office,3,ko,ask-sender,ten-year-mail,1,누가 이 편지를 맡겼는지 먼저 묻는다,sora-answer
+little-post-office,3,ko,open-after-answer,sora-answer,0,열쇠 이야기를 기억하며 편지를 연다,first-letter
+little-post-office,3,ko,show-warning,first-letter,0,소라에게 편지를 보여 주고 함께 책방으로 간다,shared-route
+little-post-office,3,ko,hide-warning,first-letter,1,편지를 감추고 혼자 닫힌 책방을 찾는다,private-route
+little-post-office,3,ko,enter-bookshop-together,shared-route,0,소라와 함께 책방 안의 기록을 찾는다,bookshop-archive
+little-post-office,3,ko,call-sora,private-route,0,소라를 불러 쪽지를 보여 준다,bookshop-archive
+little-post-office,3,ko,enter-bookshop-alone,private-route,1,쪽지를 간직하고 혼자 책방에 들어간다,bookshop-archive
+little-post-office,3,ko,read-address-book,bookshop-archive,0,배달하지 못한 주소가 표시된 지도책을 읽는다,haejin-letter
+little-post-office,3,ko,read-personal-diary,bookshop-archive,1,연우가 남긴 개인 일기를 읽는다,haejin-letter
+little-post-office,3,ko,write-haejin,haejin-letter,0,연우가 어디에 있는지 묻는 답장을 쓴다,haejin-answer
+little-post-office,3,ko,leave-before-answer,haejin-letter,1,답을 기다리지 않고 바닷길로 향한다,tide-road
+little-post-office,3,ko,follow-haejin-map,haejin-answer,0,해진이 표시한 길을 따라 등대로 간다,tide-road
+little-post-office,3,ko,walk-with-sora,tide-road,0,소라와 보폭을 맞춰 등대 문을 연다,lighthouse-room
+little-post-office,3,ko,walk-alone,tide-road,1,혼자 발자국을 따라 등대 문을 연다,lighthouse-room
+little-post-office,3,ko,sort-undelivered-mail,lighthouse-room,0,지도와 우편함을 맞춰 배달하지 못한 주소를 정리한다,undelivered-addresses
+little-post-office,3,ko,read-yeonwoo-confession,lighthouse-room,1,일기에서 떨어진 연우의 고백을 읽는다,yeonwoo-confession
+little-post-office,3,ko,leave-sealed,undelivered-addresses,0,편지를 열지 않고 수신인에게 돌려주기로 한다,haejin-truth
+little-post-office,3,ko,keep-confession-complete,yeonwoo-confession,0,문장을 덜어 내지 않고 고백 전체를 남긴다,haejin-truth
+little-post-office,3,ko,let-sora-turn-key,haejin-truth,0,소라와 함께 열쇠를 돌린다,shared-vigil
+little-post-office,3,ko,turn-key-alone,haejin-truth,1,내가 열쇠를 돌려 마지막 칸을 연다,solitary-vigil
+little-post-office,3,ko,take-final-mail-together,shared-vigil,0,소라와 함께 마지막 봉투를 꺼낸다,last-delivery
+little-post-office,3,ko,take-final-mail-alone,solitary-vigil,0,마지막 봉투와 장부를 꺼낸다,last-delivery
+little-post-office,3,ko,return-ledger,last-delivery,0,장부와 마지막 편지를 우체국으로 가져간다,returned-ending
+little-post-office,3,ko,keep-last-letter,last-delivery,1,마지막 편지를 간직하고 우편함을 닫는다,kept-ending

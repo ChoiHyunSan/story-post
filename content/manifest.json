@@ -1,0 +1,23 @@
+[
+  {
+    "path": "content/fixtures/foundation.json",
+    "developmentOnly": true,
+    "showInLibrary": false
+  },
+  {
+    "path": "content/stories/little-post-office/episode-01.json",
+    "developmentOnly": true,
+    "showInLibrary": false
+  },
+  {
+    "path": "content/stories/little-post-office/episode-01-v2.json",
+    "developmentOnly": true,
+    "showInLibrary": false
+  },
+  {
+    "path": "content/stories/little-post-office/episode-01-v3.json",
+    "presentationPath": "content/presentations/little-post-office/episode-01-v3.json",
+    "developmentOnly": true,
+    "showInLibrary": true
+  }
+]

@@ -1,0 +1,7 @@
+story_id,working_version,locale,choice_id,ordinal,flag_id,operator,expected_value
+little-post-office,3,ko,walk-with-sora,0,with-sora,equals,true
+little-post-office,3,ko,walk-alone,0,with-sora,equals,false
+little-post-office,3,ko,sort-undelivered-mail,0,follow-addresses,equals,true
+little-post-office,3,ko,read-yeonwoo-confession,0,read-personal-note,equals,true
+little-post-office,3,ko,let-sora-turn-key,0,with-sora,equals,true
+little-post-office,3,ko,turn-key-alone,0,with-sora,equals,false

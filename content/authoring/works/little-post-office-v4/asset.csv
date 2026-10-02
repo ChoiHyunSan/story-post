@@ -1,0 +1,3 @@
+asset_id,asset_type,source_path,status,rights_holder,license,content_hash,alt_text,duration_ms,notes
+little-post-office-cover,background,assets/little-post-office-cover.jpg,ready,Story Post project,project use under OpenAI terms,065c125592c2f383a130ecf68daa1a2eafcab42751998c9c9262276ce12c7707,밤바다 옆 오래된 우체국과 멀리 보이는 등대,,OpenAI ImageGen으로 생성한 개발용 표지 겸 배경 · 제작실 검수 완료
+little-post-office-tide-road-v2,background,assets/little-post-office-tide-road-v2.png,ready,Story Post project,project use under OpenAI terms,a38c2cbb5eef625a26aa4036e0a50dc745d05418b9b49e89b2a6730bbf2e41a7,"밤바다의 썰물 돌길과 불 꺼진 등대, 아래층의 흰 창문과 웅덩이에 뜬 우표",,OpenAI 내장 ImageGen 생성 · 자체 표지 화풍 참조 · 아래층 흰 창문을 원고에 맞춤 · v4 초안용 · 1536×1024

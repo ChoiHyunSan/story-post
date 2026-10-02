@@ -1,0 +1,3 @@
+story_id,working_version,locale,cue_id,scene_id,block_id,choice_id,trigger,channel,action,asset_id,ordinal,fade_ms,volume,loop,duration_ms
+little-post-office,4,ko,ten-year-mail-cover,ten-year-mail,,,scene_enter,background,show,little-post-office-cover,0,0,,0,
+little-post-office,4,ko,tide-road-background,tide-road,,,scene_enter,background,show,little-post-office-tide-road-v2,0,0,,0,

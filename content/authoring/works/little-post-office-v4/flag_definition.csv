@@ -1,0 +1,4 @@
+story_id,working_version,locale,flag_id,ordinal,value_type,default_value,description
+little-post-office,4,ko,with-sora,0,boolean,false,소라와 동행 중
+little-post-office,4,ko,follow-addresses,1,boolean,false,지도책을 선택함
+little-post-office,4,ko,read-personal-note,2,boolean,false,연우의 개인 일기를 선택함
